@@ -31,6 +31,8 @@ spec:
           env:
             - name: BPL_JVM_THREAD_COUNT
               value: "50"
+            - name: DISCOVERY_SERVICE_URL
+              value: http://discovery-service:8085/eureka/
           livenessProbe:
             httpGet:
               path: /actuator/health/liveness
