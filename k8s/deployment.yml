@@ -29,6 +29,8 @@ spec:
           ports:
             - containerPort: 8082
           env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: test
             - name: BPL_JVM_THREAD_COUNT
               value: "50"
             - name: DISCOVERY_SERVICE_URL

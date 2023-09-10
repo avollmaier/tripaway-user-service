@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    active: test
   application:
     name: user-service
   config:
@@ -10,7 +8,7 @@ spring:
       discovery:
         enabled: true
         serviceId: 'config-service'
-      fail-fast: true
+      fail-fast: false
       retry:
         max-attempts: ${CONFIG_SERVICE_MAX_ATTEMPTS:20}
         max-interval: ${CONFIG_SERVICE_MAX_INTERVAL:10000}
